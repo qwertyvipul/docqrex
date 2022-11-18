@@ -10,14 +10,14 @@ jobs:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
         steps:
+            - name: Enter docqrex directory
+              run: cd docqrex
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
               with:
                   node-version: 16.x
                   cache: npm
 
-            - name: Enter docqrex directory
-              run: cd docqrex
             - name: Install dependencies
               run: npm install --frozen-lockfile
             - name: Build website
