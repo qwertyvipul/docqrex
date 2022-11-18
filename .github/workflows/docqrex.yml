@@ -8,8 +8,6 @@ on:
 defaults:
     run:
         working-directory: docqrex
-    with:
-        working-directory: docqrex
 
 jobs:
     deploy:
@@ -21,7 +19,7 @@ jobs:
               with:
                   node-version: 16.x
                   cache: npm
-                  cache-dependency-path: package-lock.json
+                  cache-dependency-path: docqrex/package-lock.json
 
             - name: Install dependencies
               run: npm install --frozen-lockfile
