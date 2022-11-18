@@ -18,7 +18,7 @@ jobs:
                   cache-dependency-path: docqrex/package-lock.json
 
             - name: Install dependencies
-              run: npm install --frozen-lockfile
+              run: cd docqrex && npm install --frozen-lockfile
             - name: Enter docqrex directory
               run: cd docqrex
             - name: Build website
