@@ -12,7 +12,7 @@ const config = {
     baseUrl: process.env.BASE_URL ?? `/`,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/smiley.png',
+    favicon: 'img/logo.png',
     organizationName: 'qwertyvipul',
     projectName: 'docqrex',
 
@@ -28,7 +28,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./docs/sidebars.js'),
-                    editUrl: 'https://github.com/qwertyvipul/docqrex',
+                    breadcrumbs: false,
                 },
                 blog: {
                     showReadingTime: true,
@@ -46,8 +46,9 @@ const config = {
             navbar: {
                 title: '@docqrex',
                 logo: {
-                    alt: 'Docusaurus Logo',
-                    src: 'img/smiley.png',
+                    // <a href="https://www.freepik.com/free-vector/cute-dinosaur-playing-guitar-music-cartoon-vector-icon-illustration-animal-technology-icon-isolated_25864840.htm#query=logo%20dinosaur&position=8&from_view=search&track=sph">Image by catalyststuff</a> on Freepik
+                    alt: 'Docqrex Logo',
+                    src: 'img/logo.png',
                 },
                 items: [
                     {
@@ -55,11 +56,6 @@ const config = {
                         docId: 'index',
                         position: 'left',
                         label: 'Docs',
-                    },
-                    {
-                        href: 'https://github.com/qwertyvipul/docqrex',
-                        label: 'GitHub',
-                        position: 'right',
                     },
                 ],
             },
