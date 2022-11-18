@@ -16,17 +16,19 @@ jobs:
                   node-version: 16.x
                   cache: npm
 
+            - name: Enter docqrex directory
+              run: cd docqrex
             - name: Install dependencies
               run: npm install --frozen-lockfile
             - name: Build website
               env:
                   BASE_URL: /docqrex/
-              run: cd docqrex && npm run build
+              run: npm run build
             - name: Push to website branch
               uses: s0/git-publish-subdir-action@develop
               env:
                   REPO: self
                   BRANCH: website
-                  FOLDER: docqrex/build
+                  FOLDER: build
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   MESSAGE: 'Deploy website - based on {sha}'
