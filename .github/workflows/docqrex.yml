@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Docqrex
 
 on:
     push:
@@ -10,17 +10,16 @@ jobs:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
         steps:
+              working-directory: ./docqrex
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
               with:
                   node-version: 16.x
                   cache: npm
-                  cache-dependency-path: docqrex/package-lock.json
+                  cache-dependency-path: package-lock.json
 
             - name: Install dependencies
-              run: cd docqrex && npm install --frozen-lockfile
-            - name: Enter docqrex directory
-              run: cd docqrex
+              run: npm install --frozen-lockfile
             - name: Build website
               env:
                   BASE_URL: /docqrex/
