@@ -10,7 +10,6 @@ jobs:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
         steps:
-              working-directory: ./docqrex
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
               with:
@@ -24,7 +23,7 @@ jobs:
               env:
                   BASE_URL: /docqrex/
               run: npm run build
-              
+
             - name: Push to website branch
               uses: s0/git-publish-subdir-action@develop
               env:
