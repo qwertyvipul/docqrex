@@ -5,6 +5,10 @@ on:
         branches:
             - main
 
+default:
+    run:
+        working-directory: docqrex
+
 jobs:
     deploy:
         name: Deploy to GitHub Pages
@@ -15,11 +19,10 @@ jobs:
               with:
                   node-version: 16.x
                   cache: npm
-                  cache-dependency-path: docqrex/package-lock.json
+                  cache-dependency-path: package-lock.json
 
             - name: Install dependencies
               run: npm install --frozen-lockfile
-              working-directory: docqrex
             - name: Build website
               env:
                   BASE_URL: /docqrex/
