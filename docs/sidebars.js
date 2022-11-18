@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-    docsSidebar: ['index'],
+    docsSidebar: ['index', 'todo'],
 };
 
 module.exports = sidebars;
