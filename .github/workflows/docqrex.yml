@@ -6,9 +6,6 @@ on:
             - main
 
 jobs:
-    defaults:
-        run:
-            working-directory: docqrex
     deploy:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
