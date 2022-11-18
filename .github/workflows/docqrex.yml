@@ -33,6 +33,6 @@ jobs:
               env:
                   REPO: self
                   BRANCH: website
-                  FOLDER: build
+                  FOLDER: docqrex/build
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   MESSAGE: 'Deploy website - based on {sha}'
