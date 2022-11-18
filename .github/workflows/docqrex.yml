@@ -8,6 +8,8 @@ on:
 defaults:
     run:
         working-directory: docqrex
+    with:
+        working-directory: docqrex
 
 jobs:
     deploy:
