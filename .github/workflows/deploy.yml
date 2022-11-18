@@ -11,8 +11,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Enter docqrex directory
-              run: cd docqrex
             - uses: actions/setup-node@v2
               with:
                   node-version: 16.x
@@ -21,6 +19,8 @@ jobs:
 
             - name: Install dependencies
               run: npm install --frozen-lockfile
+            - name: Enter docqrex directory
+              run: cd docqrex
             - name: Build website
               env:
                   BASE_URL: /docqrex/
