@@ -24,6 +24,7 @@ jobs:
               env:
                   BASE_URL: /docqrex/
               run: npm run build
+              
             - name: Push to website branch
               uses: s0/git-publish-subdir-action@develop
               env:
